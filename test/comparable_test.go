@@ -7,12 +7,9 @@ import (
 )
 
 func IsSame[C comparable](val1, val2 C) bool {
-	if val1 == val2 {
-		return true
-	} else {
-		return false
-	}
+	return val1 == val2
 }
+
 func TestIsSame(t *testing.T) {
 	assert.True(t, IsSame[string]("Viking", "Viking"))
 	assert.True(t, IsSame[int](220, 220))

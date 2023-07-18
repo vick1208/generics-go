@@ -29,10 +29,12 @@ func TestExperMaps(t *testing.T) {
 		"Name": "Eko",
 	}
 
-	assert.True(t, maps.Equal[map[string]string](first, second))
+	assert.True(t, maps.Equal(first, second))
+	// assert.True(t, maps.Equal[map[string]string](first, second)) => ekuivalen
 }
 func TestExperSlice(t *testing.T) {
 	alpha := []string{"Bandar"}
 	beta := []string{"Bandar"}
 	assert.True(t, slices.Equal[string](alpha, beta))
+	// assert.True(t, slices.Equal[string](alpha, beta)) => ekuivalen
 }
